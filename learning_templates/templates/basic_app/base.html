@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body class="mt-5 text-light bg-dark" data-bs-theme="dark">
+    <nav
+      class="navbar fixed-top navbar-dark bg-dark navbar-expand-lg"
+      data-bs-theme="dark"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{%url 'home'%}">Basic</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navLinks"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navLinks">
+          <ul class="navbar-nav">
+            <li class="nav-item"
+              ><a class="nav-link" href="{%url 'start:relative'%}"
+                >Relative</a
+              ></li
+            >
+            <li class="nav-item"
+              ><a class="nav-link" href="{%url 'start:index'%}">index</a></li
+            >
+            <li class="nav-item"
+              ><a class="nav-link" href="{%url 'start:other'%}">Other</a></li
+            >
+            <li class="nav-item"
+              ><a class="nav-link" href="{%url 'start:nameForm'%}">Form</a></li
+            >
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid"
+      >{%block body_block%}
+      <h1>Hello Home</h1>
+      {%endblock%}
+    </div>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+ {% extends "basic_app/base.html" %}{% load custom_filter %}
+ {% block body_block %}
+<h1>Hello Form</h1>
+<div class="container align-center position-relative">
+<h1>{{number}} </h1>{%if names%} {%for name in names%}
+
+  <h1>{{name|cutit}}</h1>
+{%endfor%} {%endif%}
+
+<form action="{%url 'start:nameForm'%}" method="POST">
+  
+    <input
+      type="text"
+      class="w-25 text-light form-control bg-dark mb-2"
+      name="name_field"
+      value=""
+      id=""
+    />
+    <input type="submit" class="btn btn-dark border-info" value="Submit" />
+  </div>
+  {% csrf_token %}
+</form>
+{{form}} {%endblock body_block%}
